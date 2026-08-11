@@ -12,6 +12,33 @@ que nunca se rompe el ritmo.
 **Licencia:** MIT (ver [LICENSE](LICENSE)) — uso libre, incluido comercial,
 manteniendo el aviso de copyright. Sin garantía ni soporte incluidos.
 
+<!-- LOOP-MAP:START (generado por `php artisan project:loop readme` — no editar a mano) -->
+
+## El bucle que cierra
+
+<p align="center"><img src="https://adrianmoreno-dev.com/bucle/adaptive-music-engine.svg" alt="Mapa del bucle de Adaptive Music Engine" width="900"></p>
+
+**Para** quien está montando la banda sonora de un juego · **En cada cambio de escena**
+
+| Etapa | Qué pasa | Quién |
+|---|---|---|
+| **1. Disparador** | La música del juego corta de golpe al pasar de explorar a combatir y suena a parche. | persona |
+| **2. Acción** | Cambia de capa según el estado del juego y cruza las pistas con un crossfade cuadrado al beat. | software |
+| **3. Medición** | La transición sonando, con el punto exacto del compás en el que ha entrado la capa nueva. | software |
+| **4. Decisión** | Decido si la transición cuela o hay que ajustar capas y tiempos. | persona |
+
+### Lo que no hace
+
+- No compone música: mezcla y encadena las pistas que le des.
+- No es un motor de audio completo: se ocupa de la transición, no del resto del sonido.
+- No adivina el estado del juego: el juego le dice en qué escena está.
+
+### Por qué está construido así
+
+- **Cruzar en el beat** en vez de hacer el crossfade en cuanto llega el aviso — Un fundido a mitad de compás se oye como un error de reproducción. Esperar al beat hace que el corte parezca escrito así.
+
+<!-- LOOP-MAP:END -->
+
 ## Demo en vivo
 
 [adrianmoreno-dev.com/demo/adaptive-music-engine](https://adrianmoreno-dev.com/demo/adaptive-music-engine)
